@@ -38,6 +38,7 @@ fi
 touch $SDIRS
 
 # save current directory to bookmarks
+unalias s &>/dev/null
 function s() {
     check_help $1
     _bookmark_name_valid "$@"
@@ -49,6 +50,7 @@ function s() {
 }
 
 # jump to bookmark
+unalias g &>/dev/null
 function g() {
     check_help $1
     source $SDIRS
@@ -63,6 +65,7 @@ function g() {
 }
 
 # print bookmark
+unalias p &>/dev/null
 function p() {
     check_help $1
     source $SDIRS
@@ -70,6 +73,7 @@ function p() {
 }
 
 # delete bookmark
+unalias d &>/dev/null
 function d() {
     check_help $1
     _bookmark_name_valid "$@"
@@ -93,6 +97,7 @@ function check_help() {
 }
 
 # list bookmarks with dirnam
+unalias l &>/dev/null
 function l() {
     check_help $1
     source $SDIRS
